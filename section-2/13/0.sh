@@ -73,3 +73,73 @@ Starting Redis Server
 1:M 02 Jan 2026 03:06:58.035 * <search> Acquired RedisJSON_V6 API
 1:M 02 Jan 2026 03:06:58.040 * Server initialized
 1:M 02 Jan 2026 03:06:58.040 * Ready to accept connections tcp
+----------------------------------------------------------------------------
+
+itzamna@DESKTOP-R0QENLJ MINGW64 ~/Documents/GitHub/u7-public/section-2/13 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   0.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+itzamna@DESKTOP-R0QENLJ MINGW64 ~/Documents/GitHub/u7-public/section-2/13 (main)
+$ git add .
+warning: in the working copy of 'section-2/13/0.sh', LF will be replaced by CRLF the next time Git touches it
+
+itzamna@DESKTOP-R0QENLJ MINGW64 ~/Documents/GitHub/u7-public/section-2/13 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   0.sh
+
+
+itzamna@DESKTOP-R0QENLJ MINGW64 ~/Documents/GitHub/u7-public/section-2/13 (main)
+$ git commit -m "pushing 0.sh"
+[main e8c634f] pushing 0.sh
+ 1 file changed, 75 insertions(+)
+
+itzamna@DESKTOP-R0QENLJ MINGW64 ~/Documents/GitHub/u7-public/section-2/13 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+itzamna@DESKTOP-R0QENLJ MINGW64 ~/Documents/GitHub/u7-public/section-2/13 (main)
+$ git remote -v
+origin  https://github.com/devopsdiscipuli/u7-public.git (fetch)
+origin  https://github.com/devopsdiscipuli/u7-public.git (push)
+
+itzamna@DESKTOP-R0QENLJ MINGW64 ~/Documents/GitHub/u7-public/section-2/13 (main)
+$ git push origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.88 KiB | 1.88 MiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/devopsdiscipuli/u7-public.git
+   ba077e1..e8c634f  main -> main
+
+itzamna@DESKTOP-R0QENLJ MINGW64 ~/Documents/GitHub/u7-public/section-2/13 (main)
+$ docker ps --all
+CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS                     PORTS     NAMES
+0906bd87f31c   redis         "docker-entrypoint.s…"   11 minutes ago   Exited (0) 9 minutes ago             busy_diffie
+e15daf92497e   mysql         "docker-entrypoint.s…"   11 days ago      Exited (1) 11 days ago               awesome_wu
+19baa77b1417   mysql         "docker-entrypoint.s…"   11 days ago      Exited (1) 11 days ago               pedantic_margulis   
+954fc11593e0   mysql         "docker-entrypoint.s…"   11 days ago      Exited (1) 11 days ago               nifty_hermann       
+4a9ef8c77bf1   busybox       "sh"                     2 weeks ago      Exited (0) 2 weeks ago               adoring_sanderson   
+b763c8c557a1   hello-world   "/hello"                 3 weeks ago      Exited (0) 3 weeks ago               confident_tu        
+
+itzamna@DESKTOP-R0QENLJ MINGW64 ~/Documents/GitHub/u7-public/section-2/13 (main)
+$
