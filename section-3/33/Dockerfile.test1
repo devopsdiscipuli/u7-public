@@ -1,0 +1,9 @@
+# existing base image
+FROM alpine
+
+# download & install dependencies & libraries
+RUN apk --update add redis
+RUN apk add --update gcc
+
+# start-up instruction for container
+CMD [ "redis-server" ]
